@@ -18,9 +18,13 @@ public class Test {
         mage.attack("magic");
          */
 
-        warrior.moveBack();
+        warrior.moveRight();
         warrior.moveLeft();
-        mage.moveForward();
+        warrior.moveBack();
+        warrior.moveForward();
         mage.moveRight();
+        mage.moveLeft();
+        mage.moveBack();
+        mage.moveForward();
     }
 }
