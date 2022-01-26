@@ -91,4 +91,8 @@ public class Character implements Movable {
     public void moveBack() {
         System.out.println(this.name+": moves back");
     }
+
+    public final void unsheathe() {
+        System.out.println(this.name+": unsheathes his weapon.");
+    }
 }

@@ -18,6 +18,7 @@ public class Test {
         mage.attack("magic");
          */
 
+        /*
         warrior.moveRight();
         warrior.moveLeft();
         warrior.moveBack();
@@ -26,5 +27,9 @@ public class Test {
         mage.moveLeft();
         mage.moveBack();
         mage.moveForward();
+         */
+
+        warrior.unsheathe();
+        mage.unsheathe();
     }
 }
