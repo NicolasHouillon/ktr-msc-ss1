@@ -13,7 +13,14 @@ public class Test {
         Character warrior = new Warrior("Jean-Luc");
         Character mage = new Mage("Robert");
 
+        /*
         warrior.attack("hammer");
         mage.attack("magic");
+         */
+
+        warrior.moveBack();
+        warrior.moveLeft();
+        mage.moveForward();
+        mage.moveRight();
     }
 }
