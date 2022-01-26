@@ -1,3 +1,5 @@
+package exceptions;
+
 public class Character implements Movable {
     protected String name;
     protected int life;
@@ -68,7 +70,10 @@ public class Character implements Movable {
         return RPGClass;
     }
 
-    public void attack(String arg) {
+    public void attack(String arg) throws WeaponException {
+        if (arg.equals("")) {
+            throw new WeaponException(this.name+": I refuse to fight with my bare hands.");
+        }
         System.out.println(this.name+": Rrrrrrrrr....");
     }
 
@@ -94,5 +99,13 @@ public class Character implements Movable {
 
     public final void unsheathe() {
         System.out.println(this.name+": unsheathes his weapon.");
+    }
+
+    public void tryToAttack(String weapon) {
+        try {
+            attack(weapon);
+        } catch (WeaponException w) {
+            System.out.println(w.getMessage());
+        }
     }
 }

@@ -1,7 +1,11 @@
+import exceptions.Mage;
+import exceptions.Warrior;
+import exceptions.WeaponException;
+
 public class Test {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws WeaponException {
         /*
-        Character perso = new Character("Jean-Luc");
+        exceptions.Character perso = new Character("Jean-Luc");
         System.out.println(warrior.getName());
         System.out.println(warrior.getLife());
         System.out.println(warrior.getAgility());
@@ -10,8 +14,8 @@ public class Test {
         System.out.println(warrior.getRPGClass());
         warrior.attack("my weapon");
          */
-        Character warrior = new Warrior("Jean-Luc");
-        Character mage = new Mage("Robert");
+        exceptions.Character warrior = new Warrior("Jean-Luc");
+        exceptions.Character mage = new Mage("Robert");
 
         /*
         warrior.attack("hammer");
@@ -27,9 +31,26 @@ public class Test {
         mage.moveLeft();
         mage.moveBack();
         mage.moveForward();
-         */
+
 
         warrior.unsheathe();
         mage.unsheathe();
+        */
+
+        warrior.tryToAttack("");
+        mage.tryToAttack("hammer");
+        /*
+        try {
+            warrior.attack("magic");
+        } catch (WeaponException w) {
+            System.out.println(w.getMessage());
+        }
+        try {
+            mage.attack("hammer");
+        } catch (WeaponException w) {
+            System.out.println(w.getMessage());
+        }
+
+         */
     }
 }

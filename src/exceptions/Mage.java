@@ -1,3 +1,5 @@
+package exceptions;
+
 public class Mage extends Character {
 
     public Mage(String name) {
@@ -9,10 +11,12 @@ public class Mage extends Character {
         System.out.println(name+": May the gods be with me.");
     }
 
-    public void attack(String weapon) {
-        super.attack(weapon);
-        if (weapon.equals("magic") || weapon.equals("wand")) {
+    public void attack(String weapon) throws WeaponException {
+        if (weapon.equals("magic") || weapon.equals("wand") || weapon.equals("")) {
+            super.attack(weapon);
             System.out.println(this.name+": Feel the power of my "+weapon+"!");
+        } else {
+            throw new WeaponException(this.name+": I don't need this stupid "+weapon+"! Don't misjudge my powers!");
         }
     }
 
