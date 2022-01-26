@@ -1,10 +1,10 @@
 public class Character {
-    private String name;
-    private int life;
-    private int agility;
-    private int strength;
-    private int wit;
-    private final String RPGClass;
+    protected String name;
+    protected int life;
+    protected int agility;
+    protected int strength;
+    protected int wit;
+    protected final String RPGClass;
 
     public Character(String name, String RPGClass) {
         this.name = name;
